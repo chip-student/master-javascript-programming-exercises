@@ -1,3 +1,12 @@
-function isOldEnoughToDrink(){
-    // your code here	
+function isOldEnoughToDrink(age){
+    // your code here
+    if (age >= 21)
+    {
+        return true;
+    }else{
+        return false;
+    }
 }
+
+var output = isOldEnoughToDrink(20);
+console.log(output);
