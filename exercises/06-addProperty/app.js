@@ -1,8 +1,7 @@
 function addProperty(obj, key) {
     // your code here
-    // obj[key] = true
-     obj[key] = "Brandom"
-    return obj
+     obj[key] = true
+    return obj;
 
 }
 

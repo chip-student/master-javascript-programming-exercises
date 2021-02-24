@@ -1,15 +1,22 @@
 // Write your function here
 function getElementsLessThan100AtProperty(obj, key) {
     let arr = [];
-
-    //
     let array = obj[key];
-    for (let x = 0; x < array.length; x++) {
-        if (Array.isArray(array) && array.length) {
-            // si el array existe y no esta vacio
+    //  Primer se valida que la propiedad exista
+    if (obj.hasOwnProperty(key)) {
 
-            if (array[x] < 100) {
-                arr.push(array[x]);
+        // Si existe, se obtiene su valor
+        if (Object.prototype.toString.call(array) === '[object Array]') {
+            //  La propiedad es un array
+            // Se valida que tenga elementos
+            if (array.length > 0) {
+                for (let x = 0; x < array.length; x++) {
+
+                    // si el array existe y no esta vacio
+                    if (array[x] < 100) {
+                        arr.push(array[x]);
+                    }
+                }
             }
         }
     }
